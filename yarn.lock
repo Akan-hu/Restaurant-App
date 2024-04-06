@@ -1741,7 +1741,7 @@
     semver "^7.3.5"
     validate-npm-package-name "^3.0.0"
 
-"@sanity/client@^6.15.7":
+"@sanity/client@^6.15.7", "@sanity/client@^6.15.9":
   version "6.15.9"
   resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.15.9.tgz#48aa0fac80d883a998a6c491561459ca6f682669"
   integrity sha512-fIWKn5wb7HsFxWVPu/yxMjVpivQn2C0iMrxGs0UJa+W0tg+hilrPskWxtFo37rIuY+vhLhzIyDrL4mCGqs+cpg==
