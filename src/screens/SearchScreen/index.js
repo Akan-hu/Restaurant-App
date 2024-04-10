@@ -11,7 +11,7 @@ import {
 import React, {useCallback, useEffect, useState} from 'react';
 import * as Icon from 'react-native-feather';
 import {useNavigation, useRoute} from '@react-navigation/native';
-import {getCorrectImage} from '../../helper';
+import {getCorrectImage, isIOS} from '../../helper';
 import {RESTUARANT_SCREEN} from '../../helper/routeConstants';
 
 const SearchScreen = () => {
@@ -61,22 +61,25 @@ const SearchScreen = () => {
     }
     hanldeSearch(searchQuery);
   }, [searchQuery, hanldeSearch]);
-
+  const getVerticalPadding = isIOS ? 'py-3' : 'py-0';
   return (
     <SafeAreaView className="flex-1">
       <View className="flex-row items-center">
         <TouchableOpacity className="ml-5" onPress={() => navigation.goBack()}>
           <Icon.ArrowLeft stroke={'black'} strokeWidth={3} />
         </TouchableOpacity>
-        <View className="border-1 p-4 bg-white flex-1 mx-5 ml-2 rounded-2xl border border-opacity-5 flex-row justify-between">
+        <View
+          className={`border-1 ${getVerticalPadding} bg-white flex-1 mx-5 ml-2 rounded-2xl border border-opacity-5 flex-row justify-between items-center mt-2`}>
           <TextInput
             placeholder="Restaurant, location"
             placeholderTextColor={'gray'}
             onChangeText={hanldeSearch}
             autoFocus={true}
             value={searchQuery}
+            className="ml-3"
           />
           <TouchableOpacity
+            className="mr-2"
             onPress={() => {
               setSearchQuery(''); // Clear the search query
               setFilterNames([]); // Reset filtered movies

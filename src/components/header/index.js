@@ -18,7 +18,7 @@ const Header = props => {
   const marginTop = !isIOS ? 'mt-4' : 'mt-0';
   return (
     <SafeAreaView
-      style={{height: isIOS ? 120 : 75, backgroundColor: 'white'}}
+      style={{height: isIOS ? 100 : 75, backgroundColor: 'white'}}
       className="
     shadow-lg">
       <StatusBar style="light" />

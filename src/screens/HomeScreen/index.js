@@ -23,7 +23,7 @@ import {themeColors} from '../../helper/colorConstants';
 const HomeScreen = () => {
   const [featured, setFeatured] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const handlePaddingVertical = isIOS ? 'py-3' : 'py-0';
+  const handlePaddingVertical = isIOS ? 'py-3' : 'py-3';
   const navigation = useNavigation();
   useEffect(() => {
     const fetchData = async () => {
@@ -54,12 +54,12 @@ const HomeScreen = () => {
                 onPress={() =>
                   navigation?.navigate(SEARCH_SCREEN, {data: featured})
                 }>
-                <Text className=" mr-10  ">Search here...</Text>
+                <Text className=" mr-10 ml-2  ">Search here...</Text>
               </TouchableWithoutFeedback>
 
               <View className="flex-row items-center space-x-1  border-l-2 pl-1 ">
                 <Icon.MapPin height={20} width={20} stroke={'grey'} />
-                <Text className="text-gray-600">Bareilly Uttar Pradesh</Text>
+                <Text className="text-gray-600">Bareilly UP</Text>
               </View>
             </View>
             <View className="p-2 rounded-full" style={styles.bgcolor}>
