@@ -1,79 +1,62 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# # Tadka Food - React Native App
+# Overview
+Tadka Food is a React Native app that showcases popular Indian restaurants and their popular dishes. 
+The app provides an intuitive interface for users to explore different restaurants, view their menus, and add dishes to their cart. The backend is powered by Sanity CMS, providing a flexible and robust content management solution.
 
-# Getting Started
+# Features
+Popular Restaurants: View a list of popular Indian restaurants.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Popular Dishes: Explore popular dishes from each restaurant.
 
-## Step 1: Start the Metro Server
+Cart Management: Add and manage dishes in your cart using Redux Toolkit.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+Animations: Enhanced user experience with Lottie animations.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Google Maps Integration: Locate restaurants on Google Maps.
 
-```bash
-# using npm
-npm start
+# Technologies Used
+React Native CLI
+Sanity CMS
+Redux Toolkit
+Lottie Animations
+Google Maps
 
-# OR using Yarn
-yarn start
-```
+# Usage
+Home Screen: Browse through a list of popular Indian restaurants.
 
-## Step 2: Start your Application
+Restaurant Screen: View details and popular dishes of a selected restaurant.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Cart Screen: Manage your selected dishes in the cart and proceed to checkout.
 
-### For Android
+• Components
+RestaurantCard: Displays information about a restaurant.
 
-```bash
-# using npm
-npm run android
+DishItem: Displays information about a dish, with an option to add to the cart.
 
-# OR using Yarn
-yarn android
-```
+Cart: Manages the state of cart items using Redux Toolkit.
 
-### For iOS
+# Backend Setup
+The backend is managed using Sanity CMS. Ensure you have the correct queries set up to fetch restaurant and dish data.
 
-```bash
-# using npm
-npm run ios
+Example Sanity query for fetching restaurants:
 
-# OR using Yarn
-yarn ios
-```
+groq query
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+*[_type == "restaurant"]{
+  _id,
+  name,
+  address,
+  ...
+}
+.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+<img width="340" alt="Screenshot 1946-03-03 at 8 45 39 PM" src="https://github.com/Akan-hu/Restaurant-App/assets/114865006/4b5c4e1b-2c4a-4bd6-8335-53d7177866c0">
 
-## Step 3: Modifying your App
+<img width="340" alt="Screenshot 1946-02-28 at 11 37 10 AM" src="https://github.com/Akan-hu/Restaurant-App/assets/114865006/fcf13fd1-88bb-48ea-900a-1bb824982d6d">
 
-Now that you have successfully run the app, let's modify it.
+<img width="340" alt="Screenshot 1946-02-28 at 11 37 22 AM" src="https://github.com/Akan-hu/Restaurant-App/assets/114865006/92b45605-0394-4401-a2c9-4a0049c6e087">
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+<img width="340" alt="Screenshot 1946-03-03 at 8 41 58 PM" src="https://github.com/Akan-hu/Restaurant-App/assets/114865006/a6b67d61-b400-4eec-92df-a15ea55c5b3a">
 
-## Congratulations! :tada:
 
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
